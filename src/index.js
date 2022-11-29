@@ -1,10 +1,13 @@
 const express = require('express')
+const mongoose = require('mongoose')
+
+mongoose.connect('mongodb+srv://omnistack:omnistack5@omnistack5.q2hfk2m.mongodb.net/?retryWrites=true&w=majority', {
+    useNewUrlParser: true
+})
 
 const app = express()
 
-app.get('/', (req, res) =>{
-    return res.send('Hello World')
-})
+app.use(require('./routes'));
 
 app.listen(3000, ()=>{
     console.log('Server running on http://localhost:3000')
