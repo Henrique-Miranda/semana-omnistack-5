@@ -1,6 +1,6 @@
-import { Schema, model } from 'mongoose'
+const mongoose = require('mongoose')
 
-const TweetSchema = new Schema({
+const TweetSchema = new mongoose.Schema({
     author: String,
     content: String,
     likes: {
@@ -13,4 +13,4 @@ const TweetSchema = new Schema({
     }
 })
 
-module.exports = model('Tweet', TweetSchema)
+module.exports = mongoose.model('Tweet', TweetSchema)

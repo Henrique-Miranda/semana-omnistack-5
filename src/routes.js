@@ -2,9 +2,10 @@ const express = require('express')
 
 const routes = express.Router()
 
-routes.get('/', (req, res) =>{
-    return res.send('Ok worked')
-})
+const TweetController = require('./controllers/TweetController')
+
+routes.get('/tweets', TweetController.index)
+routes.post('/tweets', TweetController.store)
 
 module.exports = routes
 
