@@ -6,7 +6,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Login />} />
+        <Route path='/' exat element={<Login />} />
         <Route path='/timeline' element={<Timeline />} />
       </Routes>
       
